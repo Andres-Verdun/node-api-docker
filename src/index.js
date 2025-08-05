@@ -25,10 +25,11 @@ app.get("/test", (req, res) => {
   }
 });
 
+app.get('/ping', (req, res) => res.json({ pong: true }));
+
+app.get('/saludo',(req, res) => res.json({msg:'Hola Mundo!'}));
+
 app.listen(port, () => {
   console.log(`Hi there, I'm listening on port http://localhost:${port}`);
 });
 
-app.get('/ping', (req, res) => res.json({ pong: true }));
-
-app.post('/saludo',(req, res) => res.json({msg:'Hola Mundo!'}));
