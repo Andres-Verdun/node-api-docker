@@ -30,3 +30,5 @@ app.listen(port, () => {
 });
 
 app.get('/ping', (req, res) => res.json({ pong: true }));
+
+app.post('/saludo',(req, res) => res.json({msg:'Hola Mundo!'}));
